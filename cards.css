@@ -1,0 +1,144 @@
+.cardwrapper {
+    position: center;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    border: 5px;
+    background-color: antiquewhite;
+    overflow: hidden;
+    margin: 0;
+    margin-right: 8;
+}
+
+.wrapper {
+    width: 55%;
+    height: 70vh;
+    display: flex;
+    margin-top: 50px;
+    margin-left: 20%;
+}
+
+.container {
+    height: 100%;
+    width: 450%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center; /* Középre igazítás */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10%;
+}
+
+.card {
+    width: 90px;
+    height: 90; /* Adjunk magasságot a kártyáknak */
+    max-width: 100%; /* Ne lépjen ki a .container-ből */
+    border-radius: .6rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: width 0.6s cubic-bezier(0.25, 0.1, 0.25, 1), height 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+    position: center;
+}
+
+.card.active {
+    width: 100%; /* Teljes szélességű megjelenítés */
+    height: 100%; /* Teljes magasságú megjelenítés */
+}
+
+
+.card img {
+    width: fit-content;
+    height: fit-content;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 260%;
+    height: 140;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+
+.cardwrapper > .border {
+    margin: 10px auto 0;
+    position: center;
+    margin-left: 30%;
+}
+
+.card[for="c1"] {
+    background-image: url(./images/kep1.jpg) ;
+}
+.card[for="c2"] {
+    background-image: url(./images/kep2.jpeg);
+}
+.card[for="c3"] {
+    background-image: url(./images/kep3.jpg);
+}
+.card[for="c4"] {
+    background-image: url(./images/kep4.webp);
+}
+.card[for="c5"] {
+    background-image: url(./images/kep5.jpg);
+}
+.card[for="c6"] {
+    background-image: url(./images/kep6.jpg);
+}
+.card[for="c7"] {
+    background-image: url(./images/kep7.jpg);
+}
+
+@media screen and (max-width: 770px) {
+    .cardwrapper{
+        position: center;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        border: 3px;
+        background-color: antiquewhite;
+        overflow: hidden;
+        margin-right: -8px;
+     }
+     .wrapper{
+        width: 45%;
+        height: 40vh;
+        display: flex;
+        margin-top: 30px;
+        margin-bottom: -90px;
+        margin-left: 0%;
+     }
+     .container{
+        height: 65%;
+        width: 218%;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center; /* Középre igazítás */
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 5%;
+     }
+     .card{
+         width: 60px;
+         height: 45;
+     }
+     input:checked + label{
+        width: 250%;
+        height: 60;
+     }
+     .cardwrapper > .border {
+        margin: 10px auto 0;
+        position: center;
+        margin-left: 12%;
+    }
+}
